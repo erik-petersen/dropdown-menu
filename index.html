@@ -5,8 +5,143 @@
     <title>GetUWired Dropdown Menu</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- BEGIN INTERNAL CSS -->
+    <style>
+      header {
+        margin: 1.5em 7.5em 1.5em;
+        padding-bottom: 1.5em;
+      }
+
+      h1 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        font-size: 1.75em;
+        letter-spacing: .15em;
+        float: left;
+      }
+
+      h1 a {
+        cursor: pointer;
+        text-decoration: none;
+        color: #393939;
+      }
+
+      /*******************************************************************
+      NAV SECTION
+      *******************************************************************/
+
+      /* nav positioned absolute in order to move formated elements as a block */
+      nav {
+        float: right;
+        margin-top: .5em;
+        position: absolute;
+        right: 3.5em;
+      }
+
+      nav li {
+        cursor: pointer;
+      }
+
+      /* main nav elements not hidden.  Positioned absolute w/z-index to come in front of image */
+      .nav-main {
+        display: inline-block;
+        width: 4em;
+        margin-right: 1.5em;
+        position: absolute;
+        padding: .25em .5em 0;
+        border-radius: .15em;
+        color: #717171;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 500;
+        font-size: 1.1em;
+        letter-spacing: .15em;
+        z-index: 2;
+      }
+
+      .nav-main:hover {
+        color: #38554B;
+        background-color: #34CC99;
+      }
+
+      /* when main nav is hovered, display its content as a block */
+      .nav-main:hover .inner-nav {
+        display: block;
+      }
+
+      /* original state of nested nav is not displayed.
+        Positioned absolute w/z-index to come in front of image
+      */
+      .inner-nav {
+        position: relative;
+        padding: 1.5em 0 1.5em .5em;
+        white-space: nowrap;
+        display: none;
+        cursor: pointer;
+        font-size: .75em;
+        color: #EEF4F0;
+        text-shadow: .1em 0 .35em #333;
+        background-color: #34CC99;
+        z-index: 1;
+      }
+
+      /* sets 1st inner nav position below image */
+      .inner-nav:first-child {
+        margin-top: 1.5em;
+      }
+
+      .inner-nav:hover {
+        background-color: #019966;
+      }
+
+      /* positioning main nav elements and their children */
+      .about {
+        right: 40em;
+      }
+
+      .about .inner-nav {
+        width: 18em;
+        margin-left: -.65em;
+      }
+
+      .locations {
+        right: 30em;
+        padding-right: 3em;
+        padding-bottom: 1.03em;
+      }
+
+      .products {
+        right: 20em;
+        padding-right: 2.75em;
+      }
+
+      .products .inner-nav {
+        width: 12em;
+        margin-left: -.65em;
+      }
+
+      .blog {
+        right: 12.5em;
+        width: 3.25em;
+        padding-bottom: 1.03em;
+      }
+
+      .contact {
+        right: 3em;
+        width: 5.5em;
+        padding-bottom: 1.03em;
+      }
+
+      /*******************************************************************
+      MAIN SECTION
+      *******************************************************************/
+
+      .background-img {
+        position: relative;
+        width: 100%;
+        z-index: 0;
+      }
+    </style>
+    <!-- END INTERNAL CSS -->
   </head>
   <body>
     <header>
